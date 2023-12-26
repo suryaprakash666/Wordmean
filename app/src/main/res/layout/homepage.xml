@@ -5,41 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Homepage">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:id="@+id/edittext"
         android:text="Start writing here"
+        android:backgroundTint="@android:color/transparent"
         />
+    </ScrollView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_below="@+id/edittext"
-        android:id="@+id/textview"/>
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/meaningbtn"
-        android:layout_below="@+id/edittext"
-        android:text="mean"/>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mainframe"/>
-    <FrameLayout
+        android:id="@+id/mainframe"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
-        <fragment
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/myfrag"
-            android:name="com.trust.ease_noting.bottom_navbar"
-            />
-    </FrameLayout>
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

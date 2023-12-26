@@ -3,4 +3,11 @@
 val textView = myfragment.view?.findViewById<TextView>(R.id.meanfrag)
 textView?.text = ("Definition of $word:\n$definition")
 
-2)
+2)How to push localgit repository to Remote git Repo?
+  use this command to add a link of the remote repository you ctreated in github or where you want to add the project.
+  git remote add origin <new_repository_url>
+  replace <new_repository_url> with the link of the remote repo.
+
+  finally add the project to github repo with this command
+  git push -u origin master(use the branch name in place of master if any other)
+  

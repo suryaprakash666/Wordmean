@@ -10,11 +10,6 @@ import android.view.ViewGroup
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [bottom_navbar.newInstance] factory method to
- * create an instance of this fragment.
- */
 class bottom_navbar : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
@@ -33,24 +28,5 @@ class bottom_navbar : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_bottom_navbar, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment bottom_navbar.
-         */
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            bottom_navbar().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }
