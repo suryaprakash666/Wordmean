@@ -10,4 +10,9 @@ textView?.text = ("Definition of $word:\n$definition")
 
   finally add the project to github repo with this command
   git push -u origin master(use the branch name in place of master if any other)
-  
+
+3)commands to push changes into github
+git add .  # Stage all changes
+git commit -m "Your descriptive commit message here"
+git push origin <branch_name>
+**
