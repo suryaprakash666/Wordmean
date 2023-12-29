@@ -16,3 +16,7 @@ git add .  # Stage all changes
 git commit -m "Your descriptive commit message here"
 git push origin <branch_name>
 **
+
+4)
+git push origin newbrachname
+//this command is used to push the locally created branch to remote Repo.

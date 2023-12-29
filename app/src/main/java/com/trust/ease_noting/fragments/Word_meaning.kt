@@ -1,10 +1,11 @@
-package com.trust.ease_noting
+package com.trust.ease_noting.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.trust.ease_noting.R
 
 class word_meaning : Fragment() {
 
@@ -19,7 +20,7 @@ class word_meaning : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_frag1, container, false)
+        return inflater.inflate(R.layout.meaningshowing_frag, container, false)
     }
 
 

@@ -1,4 +1,4 @@
-package com.trust.ease_noting
+package com.trust.ease_noting.classes
 
 import android.app.Activity
 import android.content.Context

@@ -2,12 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/savepage"
-        android:title="Save"/>
+        android:title="Save"
+        android:icon="@drawable/save"/>
     <item
         android:id="@+id/favourite"
-        android:title="Fav"/>
+        android:title="Fav"
+        android:icon="@drawable/favourite"/>
     <item
         android:id="@+id/meaning"
-        android:title="Means"/>
+        android:title="Means"
+        android:icon="@drawable/meaning"
+        />
 
 </menu>

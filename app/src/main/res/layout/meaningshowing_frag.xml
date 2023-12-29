@@ -3,20 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".word_meaning"
+    tools:context=".fragments.word_meaning"
     android:layout_gravity="center_vertical">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="100dp"
+        android:background="@android:color/transparent">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/meanfrag"
         android:text="Meaning Will Apper Here Soon"
+        android:textColor="@color/black"
         android:inputType="textMultiLine"
         />
     </ScrollView>
+
 
 </FrameLayout>
