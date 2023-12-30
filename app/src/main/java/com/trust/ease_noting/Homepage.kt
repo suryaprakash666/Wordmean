@@ -44,39 +44,64 @@ class Homepage : AppCompatActivity() {
         favbutton = mymenu.findItem(R.id.favourite)
         meanbutton = mymenu.findItem(R.id.meaning)
 
+        var isFragmentOpen = false
+
         //Adding clickListener On BottomNavigation View's Item(Extract Meaning)
         meanbutton.setOnMenuItemClickListener {
-            val myfragment = word_meaning()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.mainframe,myfragment)
-                .commit()
-            val word = editText.text.toString().trim()
-            val wordapi = WordApi()
-            if(word.isEmpty()){
-                Toast.makeText(this,"Enter a word",Toast.LENGTH_SHORT).show()
-            } else if(word.contains("\\s".toRegex())){
-                Toast.makeText(this,"Enter single word only",Toast.LENGTH_SHORT).show()
+            if (isFragmentOpen) {
+                // Close the fragment and update state
+                supportFragmentManager.popBackStack()
+                isFragmentOpen = false
+                // Update button text or appearance (e.g., "Get Meaning")
+                meanbutton.title = "Get Meaning"
             } else {
-                CoroutineScope(Dispatchers.IO).launch {
-                    try{
-                        val definition = wordapi.getWordDefinition(word)
-                        withContext(Dispatchers.Main) {
-                            val textView = myfragment.view?.findViewById<TextView>(R.id.meanfrag)
-                            textView?.text = ("Definition of $word:\n$definition")
+                // Open the fragment, fetch word definition, and update state
+                val myfragment = word_meaning()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.mainframe, myfragment)
+                    .addToBackStack(null) // Allow back navigation
+                    .commit()
+                isFragmentOpen = true
+                // Update button text or appearance (e.g., "Close Meaning")
+                meanbutton.title = "Close Meaning"
+
+                val word = editText.text.toString().trim()
+                val wordapi = WordApi()
+
+                if (word.isEmpty()) {
+                    Toast.makeText(this, "Enter a word", Toast.LENGTH_SHORT).show()
+                } else if (word.contains("\\s".toRegex())) {
+                    Toast.makeText(this, "Enter single word only", Toast.LENGTH_SHORT).show()
+                } else {
+                    CoroutineScope(Dispatchers.IO).launch {
+                        try {
+                            val definition = wordapi.getWordDefinition(word)
+                            withContext(Dispatchers.Main) {
+                                val textView = myfragment.view?.findViewById<TextView>(R.id.meanfrag)
+                                textView?.text = ("Definition of $word:\n$definition")
+                            }
+                        } catch (e: IOException) {
+                            // Handling network error here
                         }
-                    } catch (e: IOException){
-                        //handling network error here
                     }
                 }
             }
             true
         }
 
+
         //Adding clickListener On BottomNavigation View's Item(Savepage)
         savebutton.setOnMenuItemClickListener {
             val savetostorage = FileSaving(this, this)
             textTosave = editText.text.toString()
             savetostorage.savePageToStorage(textTosave)
+            true
+        }
+
+        //Adding clickListener On BottomNavigation View's Item()
+        favbutton.setOnMenuItemClickListener {
+            val intent = Intent(this@Homepage,NoteStorageActivity::class.java)
+            startActivity(intent)
             true
         }
 

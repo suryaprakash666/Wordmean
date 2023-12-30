@@ -6,6 +6,7 @@
     android:background="@color/lightyellow"
     >
 
+
     <EditText
         android:id="@+id/editTextUsername"
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
         android:background="@drawable/shape"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/lightblue"/>
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -70,6 +71,13 @@
         android:layout_below="@id/NewUserRegistration"
         android:src="@drawable/robomonkey"
         android:layout_marginTop="40dp"/>
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/shape" />
 
 
 

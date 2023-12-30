@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Search bar at the top -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Notes"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true" />
+
+    <!-- Fragment container for the current note -->
+    <FrameLayout
+        android:id="@+id/noteFragmentContainer"
+        android:layout_width="356dp"
+        android:layout_height="324dp"
+        android:layout_below="@id/searchBar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="16dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape"/>
+
+    <!-- Name of the particular note -->
+    <TextView
+        android:id="@+id/noteNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noteFragmentContainer"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:text="<-- Note Name -->"
+        android:textSize="18sp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

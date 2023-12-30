@@ -34,7 +34,8 @@
         android:layout_gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav_menu"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"/>
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView

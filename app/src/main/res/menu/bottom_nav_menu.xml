@@ -13,5 +13,9 @@
         android:title="Means"
         android:icon="@drawable/meaning"
         />
+    <item
+        android:id="@+id/learning"
+        android:title="Learn"
+        android:icon="@drawable/save"/>
 
 </menu>

@@ -15,14 +15,14 @@
         android:layout_height="wrap_content"
         android:text="Today's Qoute"
         android:layout_below="@id/navheaderlogo"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:id="@+id/dailyqoute"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Relay On Reality"
         android:layout_below="@id/dailyqoute"
-        android:textSize="20sp"
+        android:textSize="12sp"
         android:textStyle="italic"
         android:textColor="@color/black"
         />
