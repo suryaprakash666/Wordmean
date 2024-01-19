@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:id="@+id/edittext"
-        android:text="Start writing here"
+        android:text="Enter a SingleWord Here"
         android:backgroundTint="@android:color/transparent"
         />
     </ScrollView>

@@ -3,4 +3,5 @@
     <string name="hello_blank_fragment">Meaning will apper here</string>
     <string name="navigation_drawer_open">drawer_open</string>
     <string name="navigation_drawer_close">drawer_close</string>
+    <string name="here_is_your_all_notes">Here is your All Notes</string>
 </resources>

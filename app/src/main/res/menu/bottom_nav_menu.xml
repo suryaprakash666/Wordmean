@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/savepage"
-        android:title="Save"
+        android:title="Save Note"
         android:icon="@drawable/save"/>
     <item
         android:id="@+id/favourite"
@@ -13,9 +13,4 @@
         android:title="Means"
         android:icon="@drawable/meaning"
         />
-    <item
-        android:id="@+id/learning"
-        android:title="Learn"
-        android:icon="@drawable/save"/>
-
 </menu>

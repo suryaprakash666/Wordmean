@@ -63,7 +63,7 @@ class Homepage : AppCompatActivity() {
                     .commit()
                 isFragmentOpen = true
                 // Update button text or appearance (e.g., "Close Meaning")
-                meanbutton.title = "Close Meaning"
+                meanbutton.title = "Close Current Meaning"
 
                 val word = editText.text.toString().trim()
                 val wordapi = WordApi()
@@ -100,8 +100,6 @@ class Homepage : AppCompatActivity() {
 
         //Adding clickListener On BottomNavigation View's Item()
         favbutton.setOnMenuItemClickListener {
-            val intent = Intent(this@Homepage,NoteStorageActivity::class.java)
-            startActivity(intent)
             true
         }
 

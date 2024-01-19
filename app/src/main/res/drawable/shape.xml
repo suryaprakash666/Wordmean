@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <solid android:color="#EDF2F3" /> <!-- Background color of the box -->
-    <corners android:radius="40dp" /> <!-- Corner radius to give rounded corners -->
+    <corners android:radius="20dp" /> <!-- Corner radius to give rounded corners -->
     <stroke
         android:width="1dp"
         android:color="#050D10" /> <!-- Border color and width -->

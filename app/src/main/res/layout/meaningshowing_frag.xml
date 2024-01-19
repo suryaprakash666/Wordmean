@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/meanfrag"
         android:text="Meaning Will Apper Here Soon"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:inputType="textMultiLine"
         />
